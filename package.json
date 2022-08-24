@@ -1,0 +1,23 @@
+{
+  "name": "grpc-node-typescript-windows",
+  "version": "1.0.0",
+  "description": "gRPC project template for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "server:serve": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./scripts/start-server.ps1",
+    "update-pbuf": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./scripts/build-ts-protobuf.ps1",
+    "client:exec": "ts-node ./client/src/index.ts"
+  },
+  "author": "Relea Florin Iacob",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.10"
+  },
+  "devDependencies": {
+    "@types/google-protobuf": "^3.15.6",
+    "grpc_tools_node_protoc_ts": "^5.3.2",
+    "grpc-tools": "^1.11.2",
+    "protoc-gen-ts": "^0.8.5",
+    "ts-node": "^10.9.1"
+  }
+}
